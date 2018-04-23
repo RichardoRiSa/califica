@@ -1,4 +1,3 @@
-<?php include('codigo.php'); ?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -42,17 +41,17 @@
               <label><h2>Evidencia<?php echo $i+1; ?></h2></label>
             </div>
             <div class="col-lg-6 col-ms">
-              <button type="button" onclick="evi('Var<?php echo $i+1; ?>EN')" id="Var<?php echo $i+1; ?>EN" class="btn btn-primary">N/P</button>
-              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E1')" id="Var<?php echo $i+1; ?>E1" class="btn btn-primary">1</button>
-              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E2')" id="Var<?php echo $i+1; ?>E2" class="btn btn-primary">2</button>
-              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E3')" id="Var<?php echo $i+1; ?>E3" class="btn btn-primary">3</button>
-              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E4')" id="Var<?php echo $i+1; ?>E4" class="btn btn-primary">4</button>
-              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E5')" id="Var<?php echo $i+1; ?>E5" class="btn btn-primary">5</button>
-              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E6')" id="Var<?php echo $i+1; ?>E6" class="btn btn-primary">6</button>
-              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E7')" id="Var<?php echo $i+1; ?>E7" class="btn btn-primary">7</button>
-              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E8')" id="Var<?php echo $i+1; ?>E8" class="btn btn-primary">8</button>
-              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E9')" id="Var<?php echo $i+1; ?>E9" class="btn btn-primary">9</button>
-              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E10')" id="Var<?php echo $i+1; ?>E10" class="btn btn-primary">10</button>
+              <button type="button" onclick="evi('Var<?php echo $i+1; ?>EN',<?php echo $i; ?>,0)" id="Var<?php echo $i+1; ?>EN" class="btn btn-primary">N/P</button>
+              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E1',<?php echo $i; ?>,1)" id="Var<?php echo $i+1; ?>E1" class="btn btn-primary">1</button>
+              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E2',<?php echo $i; ?>,2)" id="Var<?php echo $i+1; ?>E2" class="btn btn-primary">2</button>
+              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E3',<?php echo $i; ?>,3)" id="Var<?php echo $i+1; ?>E3" class="btn btn-primary">3</button>
+              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E4',<?php echo $i; ?>,4)" id="Var<?php echo $i+1; ?>E4" class="btn btn-primary">4</button>
+              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E5',<?php echo $i; ?>,5)" id="Var<?php echo $i+1; ?>E5" class="btn btn-primary">5</button>
+              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E6',<?php echo $i; ?>,6)" id="Var<?php echo $i+1; ?>E6" class="btn btn-primary">6</button>
+              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E7',<?php echo $i; ?>,7)" id="Var<?php echo $i+1; ?>E7" class="btn btn-primary">7</button>
+              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E8',<?php echo $i; ?>,8)" id="Var<?php echo $i+1; ?>E8" class="btn btn-primary">8</button>
+              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E9',<?php echo $i; ?>,9)" id="Var<?php echo $i+1; ?>E9" class="btn btn-primary">9</button>
+              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E10',<?php echo $i; ?>,10)" id="Var<?php echo $i+1; ?>E10" class="btn btn-primary">10</button>
             </div>
           </div><!-- Fin row evidencia <?php echo $i+1; ?> -->
 
