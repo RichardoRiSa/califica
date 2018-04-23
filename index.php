@@ -38,10 +38,10 @@
             <div class="col-lg-3 col-ms">
             </div>
             <div class="col-lg-2 col-ms">
-              <label><h2>Evidencia<?php echo $i+1; ?></h2></label>
+              <label><h3>Evidencia<?php echo $i+1; ?></h3></label>
             </div>
             <div class="col-lg-6 col-ms">
-              <button type="button" onclick="evi('Var<?php echo $i+1; ?>EN',<?php echo $i; ?>,0)" id="Var<?php echo $i+1; ?>EN" class="btn btn-primary">N/P</button>
+              <button type="button" onclick="evi('Var<?php echo $i+1; ?>E0',<?php echo $i; ?>,0)" id="Var<?php echo $i+1; ?>E0" class="btn btn-success">N/P</button>
               <button type="button" onclick="evi('Var<?php echo $i+1; ?>E1',<?php echo $i; ?>,1)" id="Var<?php echo $i+1; ?>E1" class="btn btn-primary">1</button>
               <button type="button" onclick="evi('Var<?php echo $i+1; ?>E2',<?php echo $i; ?>,2)" id="Var<?php echo $i+1; ?>E2" class="btn btn-primary">2</button>
               <button type="button" onclick="evi('Var<?php echo $i+1; ?>E3',<?php echo $i; ?>,3)" id="Var<?php echo $i+1; ?>E3" class="btn btn-primary">3</button>
@@ -61,7 +61,7 @@
 
       <br>
       <?php if (isset($_POST['Aciertos'])) { ?>
-        <h2>Numero de aciertos</h2>
+        <h3>Numero de aciertos</h3>
         <div class="row"> <!-- Inicia row examen -->
           <div class="col-lg-12 col-ms " id="NumeroAciertos">
             <?php for ($i=0; $i < $_POST['Aciertos']; $i++) { ?>
@@ -70,6 +70,33 @@
           </div>
         </div><!-- Fin row examen -->
       <?php } // fin del if ?>
+      <br>
+      <!-- Inicio de la tabla de resusltado  -->
+      <div class="row">
+        <div class="col-lg-12 col-ms ">
+          <table class="table table-bordered">
+            <thead>
+              <tr class="table-info">
+                <th class="text-center">TOTAL DE EVIDENCIAS</th>
+                <th class="text-center">% EVIDENCIAS</th>
+                <th class="text-center">CALIFICACION EXAMEN</th>
+                <th class="text-center">% CALIFICACION EXAMEN</th>
+                <th class="text-center">NUMERO </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center"><h4><div id="NumeroEvidencias">0/3</div></h4></td>
+                <td class="text-center"><h4><div id="PorcentajeEvidencias">30%</div></h4></td>
+                <td class="text-center"><h4><div id="CalificacionExamen">9</div></h4></td>
+                <td class="text-center"><h4><div id="PorcentajeExamen">30%</div></h4></td>
+                <td class="text-center"><h4><div id="CalificacionFinal">9</div></h4></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Fin de la tabla de resusltado  -->
     </div><!-- Fin container -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
