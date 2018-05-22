@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-7418974702235967",
+              enable_page_level_ads: true
+         });
+    </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,9 +28,9 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link">Evidencias </a>
-          <input type="number" min="1" max="5" class="form-control" value="<?php if (isset($_POST['Aciertos'])) { echo $_POST['Evidencias']; } ?>" name="Evidencias">
+          <input type="number" min="1" max="5" class="form-control" value="<?php if (isset($_POST['Aciertos'])) { echo $_POST['Evidencias']; } ?>" id="Evidencias" name="Evidencias">
           <a class="nav-link">Aciertos </a>
-          <input type="number" min="5" max="100" class="form-control" value="<?php if (isset($_POST['Aciertos'])) { echo $_POST['Aciertos']; } ?>" name="Aciertos"> 
+          <input type="number" min="5" max="100" class="form-control" value="<?php if (isset($_POST['Aciertos'])) { echo $_POST['Aciertos']; } ?>" id="Aciertos" name="Aciertos"> 
           <input type="submit" class="btn btn-dark btnlisto" value="Listo">
         </div>
       </div>
@@ -65,11 +72,11 @@
         <div class="row"> <!-- Inicia row examen -->
           <div class="col-lg-12 col-ms " id="NumeroAciertos">
             <?php for ($i=0; $i < $_POST['Aciertos']; $i++) { ?>
-              <button type="button" class="btn btn-primary cb"><?php echo $i+1; ?></button>
+              <button type="button" onclick="Exa('ValEx<?php echo $i+1; ?>',<?php echo $i+1; ?>)" id="ValEx<?php echo $i+1; ?>" class="btn btn-primary cb"><?php echo $i+1; ?></button>
             <?php } // fin del for ?>
           </div>
         </div><!-- Fin row examen -->
-      <?php } // fin del if ?>
+      
       <br>
       <!-- Inicio de la tabla de resusltado  -->
       <div class="row">
@@ -86,11 +93,11 @@
             </thead>
             <tbody>
               <tr>
-                <td class="text-center"><h4><div id="NumeroEvidencias">0/3</div></h4></td>
-                <td class="text-center"><h4><div id="PorcentajeEvidencias">30%</div></h4></td>
-                <td class="text-center"><h4><div id="CalificacionExamen">9</div></h4></td>
-                <td class="text-center"><h4><div id="PorcentajeExamen">30%</div></h4></td>
-                <td class="text-center"><h4><div id="CalificacionFinal">9</div></h4></td>
+                <td class="text-center"><h4><div id="NumeroEvidencias">0/<?php echo $_POST['Evidencias']; ?></div></h4></td>
+                <td class="text-center"><h4><div id="PorcentajeEvidencias">0%</div></h4></td>
+                <td class="text-center"><h4><div id="CalificacionExamen">0</div></h4></td>
+                <td class="text-center"><h4><div id="PorcentajeExamen">0%</div></h4></td>
+                <td class="text-center"><h4><div id="CalificacionFinal">0</div></h4></td>
               </tr>
             </tbody>
           </table>
@@ -98,10 +105,13 @@
       </div>
       <!-- Fin de la tabla de resusltado  -->
     </div><!-- Fin container -->
+    <article>
+      
+    </article>
+    <?php } // fin del if ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/funciones.js"></script>
   </body>
